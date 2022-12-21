@@ -1,5 +1,5 @@
 const initialState = {
-    album: [],
+    albums: [],
     newAlbum: {
         id: 0,
         title: '',
@@ -58,7 +58,7 @@ const albumReducer = ( state = initialState, action = {} ) => {
                 }
             return {
                 ...state,
-                dragons: state.dragons.concat( { ...state.newDragon, id: new Date().getTime()} ),
+                albums: state.albums.concat( { ...state.newAlbum, id: new Date().getTime()} ),
                 errorMsgs: [],
                 newAlbum: {
                     id: 0,
