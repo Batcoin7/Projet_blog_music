@@ -1,0 +1,24 @@
+.labelForm {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.Formulaire {
+  width: 720px;
+  height: 35vh;
+  padding: 1rem;
+  margin: 5rem 0rem;
+  background-color: rgb(221, 221, 221);
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 16px -4px #4d4d4d;
+  box-shadow: 0px 0px 16px -4px #4d4d4d;
+}
+
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
