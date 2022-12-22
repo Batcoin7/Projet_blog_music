@@ -68,10 +68,10 @@ const albumReducer = (state = initialState, action = {}) => {
                 ...state,
                 albums: state.albums.filter(album => album.id !== action.payload.album.id)
             }
-        case 'SET_NEW_DRAGON':
+        case 'SET_NEW_ALBUM':
             return {
                 ...state,
-                newDragon: action.payload.newDragon
+                newAlbum: action.payload.newAlbum
             }
         default:
             return state;
