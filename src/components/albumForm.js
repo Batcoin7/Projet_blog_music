@@ -25,7 +25,7 @@ const DragonForm = () => {
         )}
 
         <div className="labelForm">
-          <label htmlFor="title">Titre d'album:</label>
+          <label  htmlFor="title">Titre d'album:</label>
           <input
             name="title"
             type="text"
@@ -43,7 +43,7 @@ const DragonForm = () => {
           />
         </div>
         <div className="labelForm">
-          <label htmlFor="image">Insérer l'image d'album:</label>
+          <label  htmlFor="image">Insérer l'image d'album:</label>
           <input
             name="image"
             type="image"
@@ -62,7 +62,7 @@ const DragonForm = () => {
           />
         </div>
         {/* <p>
-                <label htmlFor="categorie">Categorie</label>
+                <label  htmlFor="categorie">Categorie</label>
                 <select name="categorie"
                         value={newAlbum.categorie}
                         onChange={ (e) => dispatch( setNewAlbum( { newAlbum: {
@@ -74,7 +74,7 @@ const DragonForm = () => {
                 </select>
             </p> */}
         <div className="labelForm">
-          <label htmlFor="artiste">Nom de l'artiste:</label>
+          <label  htmlFor="artiste">Nom de l'artiste:</label>
           <input
             name="artiste"
             type="text"

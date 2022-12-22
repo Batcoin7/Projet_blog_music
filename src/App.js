@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import AlbumForm from "./components/albumForm";
 import Albums from "./components/albums";
+import "./App.css";
 
 function App() {
   return (
