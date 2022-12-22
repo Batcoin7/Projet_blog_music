@@ -7,15 +7,15 @@ import Albums from "./components/albums";
 function App() {
   return (
     <BrowserRouter>
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <NavLink class="nav-link active" aria-current="page" to={"/"}>
+      <nav className="navbar navbar-expand-lg bg-light">
+        <div className="container-fluid">
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <NavLink className="nav-link active" aria-current="page" to={"/"}>
                 Home
               </NavLink>
               <NavLink
-                class="nav-link active"
+                className="nav-link active"
                 aria-current="page"
                 to={"/create-ablbum"}
               >
