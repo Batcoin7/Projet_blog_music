@@ -7,6 +7,8 @@ const AlbumForm = () => {
   const dispatch = useDispatch();
   const { newAlbum, errorMsgs, categories, albums } = useSelector((state) => state.albumReducer);
 
+  const [uploadSon, setUploadSon] = useState(false)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addAlbum());
@@ -15,6 +17,7 @@ const AlbumForm = () => {
   const handleUpload = (e) => {
     e.preventDefault();
     dispatch(upload())
+    setUploadSon(true)
   }
 
   console.log(newAlbum)
@@ -98,7 +101,7 @@ const AlbumForm = () => {
                 setNewAlbum({
                   newAlbum: {
                     ...newAlbum,
-                    son: newAlbum.son.push(e.target.value)  
+                    son: [e.target.value]  
                   },
                 })
               )
@@ -108,7 +111,7 @@ const AlbumForm = () => {
             <button type="click" onClick={(e) => handleUpload(e)} className="btn btn-outline-primary">Ajouter</button>
           </div>
           <ul>
-            {newAlbum.son.map((s, i) => <li key={i} >{s}</li>)}
+            {uploadSon && newAlbum.son.map((s, i) => <li key={i} >{s}</li>)}
           </ul>
             
         </div>
