@@ -1,20 +1,25 @@
 import {useDispatch} from "react-redux";
 import {deleteAlbum} from "../actions/albumActions";
+import {useSelector} from "react-redux";
 
-const Album = ( {album} ) => {
+const Albums = () => {
 
+    const { albums } = useSelector( state => state );
     const dispatch = useDispatch();
 
     return (
-        <li>
-            <button onClick={ () => dispatch( deleteAlbum( {album} ) ) }>delete</button>
+        <ul>
+        {   albums.map((album, i) => 
+            <li key={i}>
+            <button onClick={ () => dispatch( deleteAlbum() ) }>Supprimer</button>
             <h4>{album.title}</h4>
             <h5>{album.artiste}</h5>
             <h6>{album.date}</h6>
             <h6>{album.categorie}</h6>
             <strong>{album.son.map((s) => <h6>{s.title}</h6>)}</strong>
-        </li>
+        </li> )}
+        </ul>
     )
-}
+    }
 
-export default Album;
+export default Albums;
