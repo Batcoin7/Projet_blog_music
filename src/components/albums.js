@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 
 const Albums = () => {
 
-    const { albums } = useSelector( state => state );
+    const { albums } = useSelector( state => state.albumReducer );
     const dispatch = useDispatch();
 
     return (
