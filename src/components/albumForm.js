@@ -110,9 +110,12 @@ const AlbumForm = () => {
           <div className="labelForm">
             <button type="click" onClick={(e) => handleUpload(e)} className="btn btn-outline-primary">Ajouter</button>
           </div>
-          <ul>
-            {uploadSon && newAlbum.son.map((s, i) => <li key={i} >{s}</li>)}
+          
+          <ul className="list-group list-group-numbered">
+            {uploadSon && newAlbum.son.map((s, i) => <li className="list-group-item" key={i} >{s}</li>)}
           </ul>
+          
+          
             
         </div>
         <div className="input-group mb-3">

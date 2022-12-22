@@ -77,7 +77,11 @@ const albumReducer = (state = initialState, action = {}) => {
         case 'UPLOAD':
             return {
                 ...state,
-                newAlbum: state.newAlbum.son.concact({ ...state.newAlbum.son}) 
+                 newAlbum: {
+                    ...state,
+                    son: state.newAlbum.son.concat({ ...state.newAlbum.son}) 
+                }
+    
             }
         default:
             return state;
