@@ -9,9 +9,9 @@ const carouselReducer = ( state = initialState, action = {} ) => {
     switch( action.type )
     {
         case 'SET_INCREASE':
-            return action.payload > length ? 0 : action.payload;
+            return action.payload > initialState.length ? 0 : action.payload;
         case 'SET_DECREASE':
-            return action.payload < 0 ? length: action.payload;
+            return action.payload < 0 ? initialState.length: action.payload;
         default:
             return state;
     }
