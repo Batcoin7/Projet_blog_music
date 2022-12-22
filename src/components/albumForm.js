@@ -89,7 +89,6 @@ const AlbumForm = () => {
                   newAlbum: {
                     ...newAlbum,
                     son: {
-                      ...son,
                       title: e.target.value,
                     } 
                   },
