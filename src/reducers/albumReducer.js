@@ -1,11 +1,11 @@
 const initialState = {
-    albums: [],
+    albums: [{id: 1, title:'ipséité', image:'', artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016'}],
     newAlbum: {
         id: 0,
         title: '',
         image: '',
         artiste: '',
-        son: { title: '' },
+        son:  [],
         categorie: '',
         date: ''
     },

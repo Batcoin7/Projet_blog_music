@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 
 const Albums = () => {
 
-    const { albums } = useSelector( state => state );
+    const { albums } = useSelector( state => state.albumReducer );
     const dispatch = useDispatch();
 
     return (
@@ -16,7 +16,7 @@ const Albums = () => {
             <h5>{album.artiste}</h5>
             <h6>{album.date}</h6>
             <h6>{album.categorie}</h6>
-            <strong>{album.son.map((s) => <h6>{s.title}</h6>)}</strong>
+            <strong>{album.son.map((s, i) => <h6 key={i}>{s.title}</h6>)}</strong>
         </li> )}
         </ul>
     )
