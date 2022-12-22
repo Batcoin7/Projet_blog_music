@@ -1,5 +1,5 @@
 const initialState = {
-    albums: [{id: 1, title:'ipséité', image:'', artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016'}],
+    albums: [{id: 1, title:'ipséité', image:['https://m.media-amazon.com/images/I/61yWfxvZfGL._SY450_.jpg'], artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016'}],
     newAlbum: {
         id: 0,
         title: '',
@@ -9,8 +9,9 @@ const initialState = {
         categorie: '',
         date: ''
     },
-    categories: ['Pop', 'Rap', 'Variété', 'Rock', 'Reggae', 'Rn\b'],
+    categories: ['Pop', 'Rap', 'Variété', 'Rock', 'Reggae', 'RnB'],
     errorMsgs: [],
+    show: false,
 }
 
 const albumReducer = (state = initialState, action = {}) => {
