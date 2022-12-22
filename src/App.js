@@ -9,7 +9,6 @@ function App() {
  <BrowserRouter>
   <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">App</a> 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <NavLink class="nav-link active" aria-current="page"to={'/'}>Home</NavLink>

@@ -8,11 +8,11 @@ const Album = ( {album} ) => {
     return (
         <li>
             <button onClick={ () => dispatch( deleteAlbum( {album} ) ) }>delete</button>
-            <h4>{ album.title }</h4>
-            <h5>{ album.artiste }</h5>
-            <h6>{ album.date }</h6>
-            <h6>{ album.categorie }</h6>
-            <strong><h6>{ album.son.title }</h6></strong>
+            <h4>{album.title}</h4>
+            <h5>{album.artiste}</h5>
+            <h6>{album.date}</h6>
+            <h6>{album.categorie}</h6>
+            <strong>{album.son.map((s) => <h6>{s.title}</h6>)}</strong>
         </li>
     )
 }
