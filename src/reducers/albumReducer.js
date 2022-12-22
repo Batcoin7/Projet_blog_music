@@ -1,11 +1,11 @@
 const initialState = {
-    albums: [],
+    albums: [{id: 1, title:'ipséité', image:'', artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016'}],
     newAlbum: {
         id: 0,
         title: '',
         image: '',
         artiste: '',
-        son: { title: '' },
+        son: [],
         categorie: '',
         date: ''
     },
@@ -71,7 +71,12 @@ const albumReducer = (state = initialState, action = {}) => {
         case 'SET_NEW_ALBUM':
             return {
                 ...state,
-                newAlbum: action.payload.newAlbum
+                newAlbum: action.payload
+            }
+        case 'UPLOAD':
+            return {
+                ...state,
+                newAlbum: state.newAlbum.son.concact({ ...state.newAlbum.son}) 
             }
         default:
             return state;

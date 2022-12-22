@@ -16,7 +16,7 @@ function App() {
               <NavLink
                 className="nav-link active"
                 aria-current="page"
-                to={"/create-ablbum"}
+                to={"/create-album"}
               >
                 Création d'album
               </NavLink>
@@ -27,7 +27,7 @@ function App() {
       <main className="flex-container">
         <Routes>
           <Route path={"/"} element={<Albums />} />
-          <Route path={"/create-ablbum"} element={<AlbumForm />} />
+          <Route path={"/create-album"} element={<AlbumForm />} />
         </Routes>
       </main>
     </BrowserRouter>

@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addAlbum, setNewAlbum } from "../actions/albumActions";
+import { addAlbum, setNewAlbum, upload } from "../actions/albumActions";
+
 
 const AlbumForm = () => {
   const dispatch = useDispatch();
@@ -9,6 +11,14 @@ const AlbumForm = () => {
     e.preventDefault();
     dispatch(addAlbum());
   };
+
+  const handleUpload = (e) => {
+    e.preventDefault();
+    dispatch(upload())
+  }
+
+  console.log(newAlbum)
+  console.log(albums)
 
   return (
     <div className="d-flex justify-content-center mt-5">
@@ -46,7 +56,7 @@ const AlbumForm = () => {
           <input
             className="form-control"
             name="image"
-            type="file"
+            type="text"
             alt={newAlbum.title}
             value={newAlbum.image}
             onChange={(e) =>
@@ -61,7 +71,7 @@ const AlbumForm = () => {
             }
           />
         </div>
-        <div class="input-group mb-3">
+        <div className="input-group mb-3">
           <label className="input-group-text" htmlFor="categories">Categorie</label>
           <select className="form-select" aria-label=".form-select-sm example" name="categories"
             value={newAlbum.categorie}
@@ -76,26 +86,31 @@ const AlbumForm = () => {
           </select>
         </div>
         <div className="input-group mb-3">
-          <label className="input-group-text" htmlFor="image">Insérer image</label>
+          <label className="input-group-text" htmlFor="image">Son</label>
           <input
             className="form-control"
             name="image"
             type="text"
             alt={newAlbum.title}
-            value={newAlbum.son.title}
+            value={newAlbum.son}
             onChange={(e) =>
               dispatch(
                 setNewAlbum({
                   newAlbum: {
                     ...newAlbum,
-                    son: {
-                      title: e.target.value,
-                    } 
+                    son: newAlbum.son.push(e.target.value)  
                   },
                 })
               )
             }
           />
+          <div className="labelForm">
+            <button type="click" onClick={(e) => handleUpload(e)} className="btn btn-outline-primary">Ajouter</button>
+          </div>
+          <ul>
+            {newAlbum.son.map((s, i) => <li key={i} >{s}</li>)}
+          </ul>
+            
         </div>
         <div className="input-group mb-3">
           <label className="input-group-text" id="inputGroup-sizing-default" htmlFor="artiste">Nom de l'artiste:</label>
@@ -115,9 +130,10 @@ const AlbumForm = () => {
               )
             }
           />
+
         </div>
         <div className="labelForm">
-          <button type="submit" class="btn btn-outline-primary" disabled>Ajouter l'album</button>
+          <button type="submit" className="btn btn-outline-primary">Ajouter l'album</button>
         </div>
       </form>
     </div>
