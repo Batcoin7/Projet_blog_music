@@ -21,7 +21,7 @@ const DragonForm = () => {
         </ul>
       )}
 
-      <p>
+      <div className="labelForm">
         <label htmlFor="title">Titre d'album:</label>
         <input
           name="title"
@@ -38,8 +38,8 @@ const DragonForm = () => {
             )
           }
         />
-      </p>
-      <p>
+      </div>
+      <div className="labelForm">
         <label htmlFor="image">Insérer l'image d'album:</label>
         <input
           name="image"
@@ -57,7 +57,7 @@ const DragonForm = () => {
             )
           }
         />
-      </p>
+      </div>
       {/* <p>
                 <label htmlFor="categorie">Categorie</label>
                 <select name="categorie"
@@ -70,7 +70,7 @@ const DragonForm = () => {
                     { categorie.map( (category, i) => <option key={i} value={category}>{category}</option> ) }
                 </select>
             </p> */}
-      <p>
+      <div className="labelForm">
         <label htmlFor="artiste">Nom de l'artiste:</label>
         <input
           name="artiste"
@@ -87,10 +87,10 @@ const DragonForm = () => {
             )
           }
         />
-      </p>
-      <p>
+      </div>
+      <div className="labelForm">
         <button type="submit">Ajouter l'ablbum</button>
-      </p>
+      </div>
     </form>
   );
 };
