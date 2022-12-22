@@ -1,10 +1,9 @@
-
-
 const initialState = {
     length: 3
 }
 
 const carouselReducer = ( state = initialState, action = {} ) => {
+    const length = 3;
     
     switch( action.type )
     {

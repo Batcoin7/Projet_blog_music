@@ -13,7 +13,6 @@ const Album = ( {album} ) => {
             <h6>{ album.date }</h6>
             <h6>{ album.categorie }</h6>
             <strong><h6>{ album.son.title }</h6></strong>
-
         </li>
     )
 }

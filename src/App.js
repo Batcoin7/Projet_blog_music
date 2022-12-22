@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
-import albumForm from './components/albumForm';
-import albums from './components/albums'
+import AlbumForm from './components/albumForm';
+import Albums from './components/albums'
 
 function App() {
   return (
@@ -21,8 +21,8 @@ function App() {
 </nav>
 <main className="flex-container">
   <Routes>
-    <Route path={'/'} element={ <albums /> } />
-    <Route path={'/create-ablbum'} element={ <albumForm /> } />
+    <Route path={'/'} element={ <Albums /> } />
+    <Route path={'/create-ablbum'} element={ <AlbumForm /> } />
   </Routes>
 </main>
  </BrowserRouter>
