@@ -1,5 +1,5 @@
 const initialState = {
-    albums: [{id: 1, title:'ipséité', image:['https://m.media-amazon.com/images/I/61yWfxvZfGL._SY450_.jpg'], artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016', show : false}],
+    albums: [{id: 1, title:'ipséité', image:['https://m.media-amazon.com/images/I/61yWfxvZfGL._SY450_.jpg'], artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016', show : false}, {id: 2, title:'ipséité', image:['https://m.media-amazon.com/images/I/61yWfxvZfGL._SY450_.jpg'], artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016', show : false}, {id: 3, title:'ipséité', image:['https://m.media-amazon.com/images/I/61yWfxvZfGL._SY450_.jpg'], artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016', show : false}, {id: 4, title:'ipséité', image:['https://m.media-amazon.com/images/I/61yWfxvZfGL._SY450_.jpg'], artiste:'damso', son: ['batterie faible'], categorie:'rap', date:'2016', show : false}],
     newAlbum: {
         id: 0,
         title: '',

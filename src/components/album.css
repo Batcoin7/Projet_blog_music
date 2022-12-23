@@ -1,0 +1,11 @@
+li {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    width: 250;
+}
+
+.container-wrap {
+    display: flex;
+    flex-wrap: wrap;   
+}
