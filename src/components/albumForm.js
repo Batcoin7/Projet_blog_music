@@ -6,7 +6,7 @@ import { addAlbum, setNewAlbum, upload } from "../actions/albumActions";
 const AlbumForm = () => {
   const dispatch = useDispatch();
   const { newAlbum, errorMsgs, categories, albums } = useSelector((state) => state.albumReducer);
-
+  const [sonToAdd, setSonToAdd] = useState('');
   const [uploadSon, setUploadSon] = useState(false)
 
   const handleSubmit = (e) => {
@@ -16,7 +16,8 @@ const AlbumForm = () => {
 
   const handleUpload = (e) => {
     e.preventDefault();
-    dispatch(upload())
+    dispatch(upload({sonToAdd}));
+    setSonToAdd('');
     setUploadSon(true)
   }
 
@@ -95,17 +96,11 @@ const AlbumForm = () => {
             name="image"
             type="text"
             alt={newAlbum.title}
-            value={newAlbum.son}
+            value={sonToAdd}
             onChange={(e) =>
-              dispatch(
-                setNewAlbum({
-                  newAlbum: {
-                    ...newAlbum,
-                    son: [e.target.value]  
-                  },
-                })
-              )
+              setSonToAdd(e.target.value)
             }
+            
           />
           <div className="labelForm">
             <button type="click" onClick={(e) => handleUpload(e)} className="btn btn-outline-primary">Ajouter</button>
